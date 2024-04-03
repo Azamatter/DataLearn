@@ -6,4 +6,3 @@
 * Business Layer - слой для доступа к данным бизнес пользователей  BI (Tableau, Power BI, SAP BO, Excel, QlikView) или SQL.
 
 **Я решил использовать draw.io, и вот что получилось:**
-**ggh**
