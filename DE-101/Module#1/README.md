@@ -7,4 +7,4 @@
 
 **Я решил использовать draw.io, и вот что получилось:**
 
-![верхнеуровневая архитектура аналитического решения] (https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%231/VUAAR.png)
+![VUAAR](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%231/VUAAR.png)
