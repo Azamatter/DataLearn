@@ -1,6 +1,5 @@
 # Homework for 1 module
-**№1** 
-Необходимо нарисовать верхнеуровневую архитектуру аналитического решения, используя:
+### №1 Необходимо нарисовать верхнеуровневую архитектуру аналитического решения, используя:
 * Source Layer - слой источников данных;
 * Storage Layer - слой хранения данных (DW, Data Lake, Data Platform);
 * Business Layer - слой для доступа к данным бизнес пользователей  BI (Tableau, Power BI, SAP BO, Excel, QlikView) или SQL.
@@ -9,8 +8,7 @@
 
 ![VUAAR](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%231/VUAAR.png)
 
-**№2**
-Используя данные Sample - Superstore.xls сделать:
+### №2 Используя данные Sample - Superstore.xls сделать:
 * Использовать Lookup
 * Построить Сводную таблицу
 * Построить примеры отчетов
