@@ -8,7 +8,7 @@
 
 ![VUAAR](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%231/VUAAR.png)
 
-### №2 Используя данные Sample - Superstore.xls сделать:
+### №2 Используя данные [Sample - Superstore.xls](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%231/Sample%20-%20Superstore%20(2).xls) сделать:
 * Использовать Lookup
 * Построить Сводную таблицу
 * Построить примеры отчетов
@@ -32,5 +32,11 @@
 * Sales per region
 
 #### Постоил дашборды:
-Динамика дохода и прибыли по годам, проанализоровав данный график можно увидеть закономерность - увиличение продаж осенью. 
+* Динамика дохода и прибыли по годам, проанализировав данный график можно увидеть закономерность - увиличение продаж осенью. 
 ![DB#1](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%231/DB%231.jpg)
+* Продажа по штатам и регионам
+![DB#2](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%231/DB%232.jpg)
+* Сравнение категрии товаров, сегментов, менеджеров и динамика по сегментам
+![DB#3](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%231/DB%233.jpg)
+##### Excel файл, где проводил все работы - [HW Module 1.xls](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%231/HW%20Module%201.xlsx)
+
