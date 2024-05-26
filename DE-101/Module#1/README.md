@@ -30,3 +30,7 @@
 * Sales and Profit by Customer
 * Customer Ranking
 * Sales per region
+
+#### Постоил дашборды:
+Динамика дохода и прибыли по годам, проанализоровав данный график можно увидеть закономерность - увиличение продаж осенью. 
+![DB#1](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%231/DB%231.jpg)
