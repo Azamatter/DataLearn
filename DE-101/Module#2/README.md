@@ -8,7 +8,7 @@
  ![tablinDB](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%232/tablinDB.jpg)
 * Также немного попроктиковался делая запросы:
 >select
-city,
+>city,
 count (distinct order_id) as number_orders,
 sum(sales) as revenue
 from public.orders o 
