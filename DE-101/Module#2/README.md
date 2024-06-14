@@ -6,27 +6,33 @@
  3. Необходимо создать 3 таблицы и загрузите данные из [Sample - Superstore.xls](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%231/Sample%20-%20Superstore%20(2).xls) файл в базу данных.
  * Создал и загрузил с помощью SQL файла:
  ![tablinDB](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%232/tablinDB.jpg)
-* Также немного попроктиковался делая запросы:
-```
-select
-city,
-count (distinct order_id) as number_orders,
-sum(sales) as revenue
-from public.orders o 
-where category in ('Furniture','Technology') -- category not in ('Office Supplies')
-and extract ('year' from order_date) = 2018
-group by 1
-having sum(sales) > 10000
-order by revenue desc;
-select 
-count(*),
-count (distinct o.order_id)
-from orders o left join returns r  on orderid= order_id 
--- 9994 rows 
--- inner 3226 rows
-select 
-count(*),
-count (distinct o.order_id)
+* Также немного попроктиковался делая запросы из [домашнего задания 1 модуля](https://github.com/Azamatter/DataLearn/tree/main/DE-101/Module%231):
+
+```/* Доход по сезонам*/
+select EXTRACT(year FROM order_date) as ГОД, 
+case when EXTRACT(MONTH FROM order_date) = 1 then 'Зима'
+	when EXTRACT(MONTH FROM order_date) = 2 then 'Зима'
+ 	when EXTRACT(MONTH FROM order_date) = 12 then 'Зима'
+	when EXTRACT(MONTH FROM order_date) = 3 then 'Весна'
+ 	when EXTRACT(MONTH FROM order_date) = 4 then 'Весна'
+ 	when EXTRACT(MONTH FROM order_date) = 5 then 'Весна'
+ 	when EXTRACT(MONTH FROM order_date) = 6 then 'Лето'
+ 	when EXTRACT(MONTH FROM order_date) = 7 then 'Лето'
+ 	when EXTRACT(MONTH FROM order_date) = 8 then 'Лето'
+else 'Осень'
+end as Сезон, SUM(profit) as СУММА_ПРОДАЖ
+from orders
+group by 1,2
+order by 1
+
+/*Сравнение продаж по регионам*/
+select region, sum(sales)
 from orders o 
-where order_id in (select distinct order_id from  "returns")
-select  date_trunc('day',now()) -- timestamp
+group by 1
+
+/*Продуктовые метрики, продажи по категориям*/
+select category, sum(sales) as продажи, count(sales) as количество
+from orders
+group by category
+order by 2,3
+```
