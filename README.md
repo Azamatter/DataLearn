@@ -1,6 +1,6 @@
 ### Приветствую!
 **Меня зовут Азамат и я учусь на Data Engineer в [DataLearn](https://github.com/Data-Learn/data-engineering).**  
-**Здесь я буду выкладывать выплненные задания используя Visual Studio Code Version**  
+**Здесь я буду выкладывать выполненные задания используя Visual Studio Code Version.**  
 
 * [Homework Module #1](https://github.com/Azamatter/DataLearn/tree/main/DE-101/Module%231)
 * [Homework Module #2](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%232/README.md)  
