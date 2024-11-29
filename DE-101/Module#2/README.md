@@ -42,4 +42,8 @@ group by category
 order by 2,3
 ```
 
-
+**4. Необходимо нарисовать модель данных из [Sample - Superstore.xls](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%231/Sample%20-%20Superstore%20(2).xls):**
+* Концептуальную
+мчмч
+* Логическую
+* Физическую
