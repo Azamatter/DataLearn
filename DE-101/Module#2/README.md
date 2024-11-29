@@ -13,15 +13,9 @@
 *Доход по сезонам*
 ```
 select EXTRACT(year FROM order_date) as ГОД, 
-case when EXTRACT(MONTH FROM order_date) = 1 then 'Зима'
-	when EXTRACT(MONTH FROM order_date) = 2 then 'Зима'
- 	when EXTRACT(MONTH FROM order_date) = 12 then 'Зима'
-	when EXTRACT(MONTH FROM order_date) = 3 then 'Весна'
- 	when EXTRACT(MONTH FROM order_date) = 4 then 'Весна'
- 	when EXTRACT(MONTH FROM order_date) = 5 then 'Весна'
- 	when EXTRACT(MONTH FROM order_date) = 6 then 'Лето'
- 	when EXTRACT(MONTH FROM order_date) = 7 then 'Лето'
- 	when EXTRACT(MONTH FROM order_date) = 8 then 'Лето'
+case when EXTRACT(MONTH FROM order_date) = 1 or 2 or 12 then 'Зима'
+	when EXTRACT(MONTH FROM order_date) = 3 or 4 or 5 then 'Весна'
+ 	when EXTRACT(MONTH FROM order_date) = 6 or 7 or 8 then 'Лето'
 else 'Осень'
 end as Сезон, SUM(profit) as СУММА_ПРОДАЖ
 from orders
