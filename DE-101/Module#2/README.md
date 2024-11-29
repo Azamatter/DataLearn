@@ -8,7 +8,8 @@
  **3. Необходимо создать 3 таблицы и загрузите данные из [Sample - Superstore.xls](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%231/Sample%20-%20Superstore%20(2).xls) файл в базу данных.**
  * Создал и загрузил с помощью SQL файла:
  ![tablinDB](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%232/tablinDB.jpg)
-Также немного попроктиковался делая запросы из [домашнего задания 1 модуля](https://github.com/Azamatter/DataLearn/tree/main/DE-101/Module%231):
+* Также немного попроктиковался делая запросы из [домашнего задания 1 модуля](https://github.com/Azamatter/DataLearn/tree/main/DE-101/Module%231):
+
 *Доход по сезонам*
 ```
 select EXTRACT(year FROM order_date) as ГОД, 
