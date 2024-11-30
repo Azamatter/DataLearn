@@ -43,3 +43,7 @@ order by 2,3
 * Физическую
 
 ![2.4ph.](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%232/2.4ph.png)
+
+* Так как бесплатная версия SqlBDM ограничена, пришлось "вытащить" логическую модель с PostgreSQL, после проделывания всех нижеприведенных действий.
+
+![2.4log](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%232/2.4log.jpg)
