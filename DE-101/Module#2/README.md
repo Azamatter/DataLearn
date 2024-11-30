@@ -38,6 +38,7 @@ order by 2,3
 
 **4. Необходимо нарисовать модели данных из [Sample - Superstore.xls](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%231/Sample%20-%20Superstore%20(2).xls):**
 * С помощью SqlBDM построил концептуальную модель
+
 ![2.4cons](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%232/2.4cons.png)
 * Физическую
 
