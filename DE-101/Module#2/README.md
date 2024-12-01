@@ -134,4 +134,20 @@ join orders_dim od using (order_id)
 join customer using (customer_id)
 join region using (postal_code);
 ```
-вставляем ["тело" SQL](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%232/orders%20telo.sql) из предыдущего задания заполнив таблицу "orders", для упрощения заполнения наших таблиц.
+* Вставляем ["тело" SQL](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%232/orders%20telo.sql) из предыдущего задания заполнив таблицу "orders", для упрощения заполнения наших таблиц.
+
+* Разносим данные по нашим таблицам:
+```
+insert into product (product_id, product_name, category, subcategory) select distinct on (product_id) product_id, product_name, category, subcategory from orders;
+select *  from product;
+```
+```
+insert into customer (customer_id, customer_name , segment) select distinct on (customer_id) customer_id, customer_name, segment from orders;
+select *  from customer;
+```
+```
+insert into orders_dim (order_id, order_date , ship_date, ship_mode) select distinct on (order_id) order_id, order_date , ship_date, ship_mode from orders;
+select *  from orders_dim;
+```
+Заметил, что штат Vermont не имеет индекса, пришлось заменить на 000000 для корректной работы запросов.
+```update orders set postal_code = '000000' where postal_code is null; ```
