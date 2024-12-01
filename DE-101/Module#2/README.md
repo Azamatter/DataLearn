@@ -125,3 +125,13 @@ CREATE INDEX FK_4 ON sales_fact
  product_id
 );
 ```
+* Создаем таблицу "orders" объединив все ранее созданные таблицы
+```
+CREATE table orders as
+select * from sales_fact
+join product using (product_id)
+join orders_dim od using (order_id)
+join customer using (customer_id)
+join region using (postal_code);
+```
+вставляем ["тело" SQL](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%232/orders%20telo.sql) из предыдущего задания заполнив таблицу "orders", для упрощения заполнения наших таблиц.
