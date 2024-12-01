@@ -154,6 +154,7 @@ insert into orders_dim (order_id, order_date , ship_date, ship_mode) select dist
 select *  from orders_dim;
 ```
 *Таблица region* 
+
 Заметил, что штат Vermont не имеет индекса, пришлось заменить на 000000 для корректной работы запросов.
 ```
 update orders set postal_code = '000000' where postal_code is null; 
