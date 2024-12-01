@@ -137,17 +137,31 @@ join region using (postal_code);
 * Вставляем ["тело" SQL](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%232/orders%20telo.sql) из предыдущего задания заполнив таблицу "orders", для упрощения заполнения наших таблиц.
 
 * Разносим данные по нашим таблицам:
+
+*Таблица product* 
 ```
 insert into product (product_id, product_name, category, subcategory) select distinct on (product_id) product_id, product_name, category, subcategory from orders;
 select *  from product;
 ```
+*Таблица customer* 
 ```
 insert into customer (customer_id, customer_name , segment) select distinct on (customer_id) customer_id, customer_name, segment from orders;
 select *  from customer;
 ```
+*Таблица orders_dim* 
 ```
 insert into orders_dim (order_id, order_date , ship_date, ship_mode) select distinct on (order_id) order_id, order_date , ship_date, ship_mode from orders;
 select *  from orders_dim;
 ```
+*Таблица region* 
 Заметил, что штат Vermont не имеет индекса, пришлось заменить на 000000 для корректной работы запросов.
-```update orders set postal_code = '000000' where postal_code is null; ```
+```
+update orders set postal_code = '000000' where postal_code is null; 
+insert into region (postal_code, country, region, "state", city) select distinct on (postal_code) postal_code, country, region, "state", city from orders;
+select *  from region;
+```
+*Таблица sales_fact* 
+```
+insert into sales_fact (row_id, sales, quantity, discount, profit, postal_code, customer_id, order_id, product_id) select distinct on (row_id) row_id, sales, quantity, discount, profit, postal_code, customer_id, order_id, product_id from orders;
+select *  from sales_fact;
+```
