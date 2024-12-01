@@ -47,3 +47,81 @@ order by 2,3
 * Так как бесплатная версия SqlBDM ограничена, пришлось "вытащить" логическую модель с PostgreSQL, после проделывания всех нижеприведенных действий.
 
 ![2.4log](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%232/2.4log.jpg)
+
+**5. Необходимо скопировать DDL и выполнить его в SQL клиенте, также необходимо заполнить созданные таблицы.**
+* Копируем DDL из SqlBDM:
+```
+CREATE TABLE product
+(
+ product_id   varchar(50) NOT NULL,
+ product_name varchar(127) NOT NULL,
+ category     varchar(50) NOT NULL,
+ subcategory varchar(50) NOT NULL,
+ CONSTRAINT PK_4 PRIMARY KEY ( product_id )
+);
+
+CREATE TABLE region
+(
+ postal_code int NOT NULL,
+ country     varchar(50) NOT NULL,
+ region      varchar(50) NOT NULL,
+ "state"     varchar(50) NOT NULL,
+ city        varchar(50) NOT NULL,
+ CONSTRAINT PK_1 PRIMARY KEY ( postal_code )
+);
+
+CREATE TABLE customer
+(
+ customer_id   varchar(50) NOT NULL,
+ customer_name varchar(50) NOT NULL,
+ segment       varchar(50) NOT NULL,
+ CONSTRAINT PK_2 PRIMARY KEY ( customer_id )
+);
+
+CREATE TABLE orders_dim 
+(
+ order_id   varchar(50) NOT NULL,
+ order_date date NOT NULL,
+ ship_date  date NOT NULL,
+ ship_mode  varchar(50) NOT NULL,
+ CONSTRAINT PK_3 PRIMARY KEY ( order_id )
+);
+
+CREATE TABLE sales_fact
+(
+ row_id      serial NOT NULL,
+ sales       int NOT NULL,
+ quantity    int NOT NULL,
+ discount    int NOT NULL,
+ profit      int NOT NULL,
+ postal_code int NOT NULL,
+ customer_id varchar(50) NOT NULL,
+ order_id    varchar(50) NOT NULL,
+ product_id  varchar(50) NOT NULL,
+ CONSTRAINT PK_5 PRIMARY KEY ( row_id ),
+ CONSTRAINT FK_1 FOREIGN KEY ( postal_code ) REFERENCES region ( postal_code ),
+ CONSTRAINT FK_2 FOREIGN KEY ( customer_id ) REFERENCES customer ( customer_id ),
+ CONSTRAINT FK_3 FOREIGN KEY ( order_id ) REFERENCES orders_dim ( order_id ),
+ CONSTRAINT FK_4 FOREIGN KEY ( product_id ) REFERENCES product ( product_id )
+);
+
+CREATE INDEX FK_1 ON sales_fact
+(
+ postal_code
+);
+
+CREATE INDEX FK_2 ON sales_fact
+(
+ customer_id
+);
+
+CREATE INDEX FK_3 ON sales_fact
+(
+ order_id
+);
+
+CREATE INDEX FK_4 ON sales_fact
+(
+ product_id
+);
+```
