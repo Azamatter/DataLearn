@@ -166,3 +166,5 @@ select *  from region;
 insert into sales_fact (row_id, sales, quantity, discount, profit, postal_code, customer_id, order_id, product_id) select distinct on (row_id) row_id, sales, quantity, discount, profit, postal_code, customer_id, order_id, product_id from orders;
 select *  from sales_fact;
 ```
+**6. Необходимо создать БД в облаке и подключиться к новой БД через SQL клиент** 
+* Yandex Cloud
