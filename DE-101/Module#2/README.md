@@ -168,4 +168,6 @@ select *  from sales_fact;
 ```
 **6. Необходимо создать БД в облаке и подключиться к новой БД через SQL клиент** 
 * Для создания БД использовал Yandex Cloud, в котором дается стартовый грант в размере 4000 руб. и этого вполне достаточно для знакомсвта с ним.
-Через консоль создал БД PostgreSQL, там же есть понятные инструкции по созданию [кластера](https://yandex.cloud/ru/docs/managed-postgresql/operations/cluster-create), настройке [хоста](https://yandex.cloud/ru/docs/managed-postgresql/operations/hosts) и [подключению](https://yandex.cloud/ru/docs/managed-postgresql/operations/connect#dbeaver_1) к базе данных 
+* Через консоль создал БД PostgreSQL, там же есть понятные инструкции по созданию [кластера](https://yandex.cloud/ru/docs/managed-postgresql/operations/cluster-create), настройке [хоста](https://yandex.cloud/ru/docs/managed-postgresql/operations/hosts) и [подключению](https://yandex.cloud/ru/docs/managed-postgresql/operations/connect#dbeaver_1) к базе данных. 
+*База данных создана*
+![bd](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%232/bd.png)
