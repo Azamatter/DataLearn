@@ -1,11 +1,11 @@
-# Homework for 2 module
-**1. Необходимо установить Postgres базу данных к себе на компьютер.**
+## Homework for 2 module
+#### 1. Необходимо установить Postgres базу данных к себе на компьютер.
 * Устновил PostgreSQL v. 16.3, создал БД.
 
-**2. Необходимо установить клиент SQL для подключения базы данных.**
+#### 2. Необходимо установить клиент SQL для подключения базы данных.
 * Устновил DBeaver v. 24.0.5.
 
- **3. Необходимо создать 3 таблицы и загрузите данные из [Sample - Superstore.xls](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%231/Sample%20-%20Superstore%20(2).xls) файл в базу данных.**
+ #### 3. Необходимо создать 3 таблицы и загрузите данные из [Sample - Superstore.xls](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%231/Sample%20-%20Superstore%20(2).xls) файл в базу данных.
  * Создал и загрузил с помощью SQL файла:
  ![tablinDB](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%232/tablinDB.jpg)
 * Также немного попроктиковался делая запросы из [домашнего задания 1 модуля](https://github.com/Azamatter/DataLearn/tree/main/DE-101/Module%231):
@@ -36,7 +36,7 @@ group by category
 order by 2,3
 ```
 
-**4. Необходимо нарисовать модели данных из [Sample - Superstore.xls](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%231/Sample%20-%20Superstore%20(2).xls):**
+#### 4. Необходимо нарисовать модели данных из [Sample - Superstore.xls](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%231/Sample%20-%20Superstore%20(2).xls):
 * С помощью SqlBDM построил концептуальную модель
 
 ![2.4cons](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%232/2.4cons.png)
@@ -48,7 +48,7 @@ order by 2,3
 
 ![2.4log](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%232/2.4log.jpg)
 
-**5. Необходимо скопировать DDL и выполнить его в SQL клиенте, также необходимо заполнить созданные таблицы.**
+#### 5. Необходимо скопировать DDL и выполнить его в SQL клиенте, также необходимо заполнить созданные таблицы.
 * Копируем DDL из SqlBDM:
 ```
 CREATE TABLE product
@@ -166,7 +166,7 @@ select *  from region;
 insert into sales_fact (row_id, sales, quantity, discount, profit, postal_code, customer_id, order_id, product_id) select distinct on (row_id) row_id, sales, quantity, discount, profit, postal_code, customer_id, order_id, product_id from orders;
 select *  from sales_fact;
 ```
-**6. Необходимо создать БД в облаке и подключиться к новой БД через SQL клиент** 
+#### 6. Необходимо создать БД в облаке и подключиться к новой БД через SQL клиент
 * Для создания БД использовал Yandex Cloud, в котором дается стартовый грант в размере 4000 руб. и этого вполне достаточно для знакомсвта с ним.
 * Через консоль создал БД PostgreSQL, там же есть понятные инструкции по созданию [кластера](https://yandex.cloud/ru/docs/managed-postgresql/operations/cluster-create), настройке [хоста](https://yandex.cloud/ru/docs/managed-postgresql/operations/hosts) и [подключению](https://yandex.cloud/ru/docs/managed-postgresql/operations/connect#dbeaver_1) к базе данных. 
 
