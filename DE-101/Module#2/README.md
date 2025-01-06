@@ -173,4 +173,5 @@ select *  from sales_fact;
 ![bd](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%232/bd.png)
 
 * Перенес таблицы из предыдущего задания в БД Yandex Cloud
-![BD Yand](DE-101/Module#2/BD Yand.jpg)
+![BD Yand](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%232/BD%20Yand.jpg)
+
