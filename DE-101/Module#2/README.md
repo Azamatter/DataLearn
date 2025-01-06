@@ -44,7 +44,7 @@ order by 2,3
 
 ![2.4ph.](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%232/2.4ph.png)
 
-* Так как бесплатная версия SqlBDM ограничена, пришлось "вытащить" логическую модель с PostgreSQL, после проделывания всех нижеприведенных действий.
+* Так как бесплатная версия SqlBDM ограничена, пришлось "вытащить" логическую модель с DBeaver, после проделывания всех нижеприведенных действий.
 
 ![2.4log](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%232/2.4log.jpg)
 
@@ -171,3 +171,6 @@ select *  from sales_fact;
 * Через консоль создал БД PostgreSQL, там же есть понятные инструкции по созданию [кластера](https://yandex.cloud/ru/docs/managed-postgresql/operations/cluster-create), настройке [хоста](https://yandex.cloud/ru/docs/managed-postgresql/operations/hosts) и [подключению](https://yandex.cloud/ru/docs/managed-postgresql/operations/connect#dbeaver_1) к базе данных. 
 
 ![bd](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%232/bd.png)
+
+* Перенес таблицы из предыдущего задания в БД Yandex Cloud
+![BD Yand](DE-101/Module#2/BD Yand.jpg)
