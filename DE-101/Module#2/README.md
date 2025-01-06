@@ -173,5 +173,13 @@ select *  from sales_fact;
 ![bd](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%232/bd.png)
 
 * Перенес таблицы из предыдущего задания в БД Yandex Cloud
+
 ![BD Yand](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%232/BD%20Yand.jpg)
+
+#### 7. Необходимо создать дашборд, данные должны быть в облаке и нужно подключиться сервисом к БД.
+
+* Раз начал использовать сервисы Яндекса, то грех не воспользоваться Yandex DataLens. Создал подключение к своей БД Yandex Cloud, настроил Датасеты, создал Чарты и Дашборд:
+
+![Dbord](https://github.com/Azamatter/DataLearn/blob/main/DE-101/Module%232/Dbord.png)
+
 
